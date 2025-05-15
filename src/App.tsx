@@ -26,8 +26,7 @@ export function App() {
           action=''
         >
           <div className='flex flex-col gap-1'>
-            <label htmlFor='meuInput'>task</label>
-            <DefaultInput />
+            <DefaultInput type='text' id='taskInput' label="Task" placeholder='Informe a tarefa...' />
           </div>
 
           <div className='flex flex-col gap-1'>

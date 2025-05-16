@@ -1,9 +1,13 @@
+import { PlayCircleIcon, StopCircleIcon } from 'lucide-react'
 import { Container } from './components/Container'
 import { CountDown } from './components/CountDown'
+import { Cycles } from './components/Cycles'
 import { DefaultInput } from './components/DefaultInput'
 import { Logo } from './components/Logo'
 import { Menu } from './components/Menu'
 import './styles/global.css'
+import { DefaultButton } from './components/DefaultButton'
+import { Footer } from './components/Footer'
 
 export function App() {
   return (
@@ -26,7 +30,12 @@ export function App() {
           action=''
         >
           <div className='flex flex-col gap-1'>
-            <DefaultInput type='text' id='taskInput' label="Task" placeholder='Informe a tarefa...' />
+            <DefaultInput
+              type='text'
+              id='taskInput'
+              label='Task'
+              placeholder='Informe a tarefa...'
+            />
           </div>
 
           <div className='flex flex-col gap-1'>
@@ -34,18 +43,21 @@ export function App() {
           </div>
 
           <div className='flex flex-col gap-1'>
-            <p>Ciclos</p>
-            <p>0 0 0 0 0 0 0</p>
+            <Cycles />
           </div>
 
           <div className='flex flex-col gap-1'>
-            <button>Enviar</button>
+            <DefaultButton icon={<PlayCircleIcon className='w-7 h-7' />} />
+            <DefaultButton
+              color='red'
+              icon={<StopCircleIcon className='w-7 h-7' />}
+            />
           </div>
         </form>
       </Container>
 
       <Container>
-        <section>FOOTER</section>
+        <Footer />
       </Container>
     </div>
   )

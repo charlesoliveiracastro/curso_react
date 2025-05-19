@@ -7,6 +7,9 @@ export function Footer() {
       <p className='hover:underline cursor-pointer'>
         Chronos Pomodoro &copy; {new Date().getFullYear()} - Feito com 💚
       </p>
+      <p className='hover:underline cursor-pointer'>
+        O tema atual é: 
+      </p>
     </footer>
   )
 }

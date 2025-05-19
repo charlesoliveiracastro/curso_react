@@ -1,5 +1,5 @@
 import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from 'lucide-react'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type AvailableThemes = 'light' | 'dark';
 
@@ -13,8 +13,10 @@ export function Menu() {
   ) {
     event.preventDefault();
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark') as AvailableThemes);
-    document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark'
-  ) }
+
+    }
+
+  useEffect(() => { document.documentElement.setAttribute('data-theme', theme) }, [theme])
 
   return (
     <nav className='flex items-center justify-center gap-3 pt-2'>

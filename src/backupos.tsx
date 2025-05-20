@@ -1,33 +1,33 @@
-import './styles/global.css'
-import React, { useState } from 'react'
+import './styles/global.css';
+import React, { useState } from 'react';
 
 export function Bkp() {
-  const [files, setFiles] = useState<File[]>([])
-  const [fileNames, setFileNames] = useState<string[]>([])
-  const [tasks, setTasks] = useState<string[]>([])
-  const [newTask, setNewTask] = useState<string>('')
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [files, setFiles] = useState<File[]>([]);
+  const [fileNames, setFileNames] = useState<string[]>([]);
+  const [tasks, setTasks] = useState<string[]>([]);
+  const [newTask, setNewTask] = useState<string>('');
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleFileNameChange = (index: number, newName: string) => {
-    const updatedFileNames = [...fileNames]
-    updatedFileNames[index] = newName
-    setFileNames(updatedFileNames)
-  }
+    const updatedFileNames = [...fileNames];
+    updatedFileNames[index] = newName;
+    setFileNames(updatedFileNames);
+  };
 
   const handleFileRemove = (index: number) => {
-    const updatedFiles = files.filter((_, i) => i !== index)
-    const updatedFileNames = fileNames.filter((_, i) => i !== index)
-    setFiles(updatedFiles)
-    setFileNames(updatedFileNames)
-  }
+    const updatedFiles = files.filter((_, i) => i !== index);
+    const updatedFileNames = fileNames.filter((_, i) => i !== index);
+    setFiles(updatedFiles);
+    setFileNames(updatedFileNames);
+  };
 
   const handleAddTask = () => {
     if (newTask.trim() !== '') {
-      setTasks((prevTasks) => [...prevTasks, newTask])
-      setNewTask('')
-      setIsModalOpen(false)
+      setTasks((prevTasks) => [...prevTasks, newTask]);
+      setNewTask('');
+      setIsModalOpen(false);
     }
-  }
+  };
 
   return (
     <div className='min-h-screen bg-gray-100'>
@@ -438,5 +438,5 @@ export function Bkp() {
         </div>
       </div>
     </div>
-  )
+  );
 }

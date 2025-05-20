@@ -1,13 +1,13 @@
-import { PlayCircleIcon, StopCircleIcon } from 'lucide-react'
-import { Container } from './components/Container'
-import { CountDown } from './components/CountDown'
-import { Cycles } from './components/Cycles'
-import { DefaultInput } from './components/DefaultInput'
-import { Logo } from './components/Logo'
-import { Menu } from './components/Menu'
-import './styles/global.css'
-import { DefaultButton } from './components/DefaultButton'
-import { Footer } from './components/Footer'
+import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+import { Container } from './components/Container';
+import { CountDown } from './components/CountDown';
+import { Cycles } from './components/Cycles';
+import { DefaultInput } from './components/DefaultInput';
+import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
+import './styles/global.css';
+import { DefaultButton } from './components/DefaultButton';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
@@ -60,5 +60,5 @@ export function App() {
         <Footer />
       </Container>
     </div>
-  )
+  );
 }

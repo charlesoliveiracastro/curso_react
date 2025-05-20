@@ -1,4 +1,4 @@
-import { TimerIcon } from 'lucide-react'
+import { TimerIcon } from 'lucide-react';
 
 export function Logo() {
   return (
@@ -11,5 +11,5 @@ export function Logo() {
         <span>Chronos</span>
       </a>
     </div>
-  )
+  );
 }

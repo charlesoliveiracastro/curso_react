@@ -1,6 +1,6 @@
 type DefaultInputProps = {
-  label?: string
-} & React.ComponentProps<'input'>
+  label?: string;
+} & React.ComponentProps<'input'>;
 
 export function DefaultInput({ label, id, ...props }: DefaultInputProps) {
   return (
@@ -17,5 +17,5 @@ export function DefaultInput({ label, id, ...props }: DefaultInputProps) {
         {...props}
       />
     </>
-  )
+  );
 }

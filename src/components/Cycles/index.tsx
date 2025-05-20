@@ -13,5 +13,5 @@ export function Cycles() {
         <span className='h-4 w-4 bg-blue-600 rounded-2xl'></span>
       </div>
     </div>
-  )
+  );
 }

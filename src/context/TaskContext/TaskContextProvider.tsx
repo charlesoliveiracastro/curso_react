@@ -6,9 +6,7 @@ import { TaskContext } from './TaskContext';
 export function TaskProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<TaskStateModel>(initialTaskState);
 
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
+  useEffect(() => {}, [state]);
 
   return (
     <TaskContext.Provider value={{ state, setState }}>

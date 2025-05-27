@@ -9,6 +9,7 @@ import {
   getNextCycle,
   getWorkTimeType as getNextCycleType,
 } from '../../utils/cycleUtils';
+import { formatSecondsToMinutes } from '../../utils/formatSecondsToMinutes';
 
 export function MainForm() {
   const taskDescInput = useRef<HTMLInputElement>(null);
@@ -47,9 +48,29 @@ export function MainForm() {
         activeTask: newTask,
         currentCycle: nextCycle,
         secondsRemaining,
-        formattedSecondsRemaining: '00:00',
+        formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
         tasks: [...prevState.tasks, newTask],
         config: { ...prevState.config },
+      };
+    });
+  }
+
+  function handleInterruptTask() {
+    setState((prevState) => {
+      return {
+        ...prevState,
+        activeTask: null,
+        secondsRemaining: 0,
+        formattedSecondsRemaining: '00:00',
+        tasks: prevState.tasks.map((task) => {
+          if (prevState.activeTask && prevState.activeTask.id === task.id) {
+            return {
+              ...task,
+              interruptDate: Date.now(),
+            };
+          }
+          return task;
+        }),
       };
     });
   }
@@ -69,23 +90,41 @@ export function MainForm() {
           // value={taskDescription}
           // onChange={(e) => setTaskName(e.target.value)}
           ref={taskDescInput}
+          disabled={!!state.activeTask}
         />
       </div>
 
       <div className='flex flex-col gap-1'>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
+      {state.currentCycle > 0 && (
+        <div className='flex flex-col gap-1'>
+          <Cycles />
+        </div>
+      )}
 
       <div className='flex flex-col gap-1'>
-        <Cycles />
-      </div>
+        {!state.activeTask && (
+          <DefaultButton
+            type='submit'
+            key='startButton'
+            aria-label='Iniciar nova tarefa'
+            title='Iniciar nova tarefa'
+            icon={<PlayCircleIcon />}
+          />
+        )}
 
-      <div className='flex flex-col gap-1'>
-        <DefaultButton icon={<PlayCircleIcon className='w-7 h-7' />} />
-        <DefaultButton
-          color='red'
-          icon={<StopCircleIcon className='w-7 h-7' />}
-        />
+        {state.activeTask && (
+          <DefaultButton
+            type='button'
+            key='stopButton'
+            color='red'
+            aria-label='Interromper tarefa atual'
+            title='Interromper tarefa atual'
+            icon={<StopCircleIcon />}
+            onClick={handleInterruptTask}
+          />
+        )}
       </div>
     </form>
   );

@@ -32,38 +32,38 @@ export function Menu() {
   }, [theme]);
 
   const lastThemeIcon = {
-    dark: <SunIcon className='w-8 h-8 p-1' />,
-    light: <MoonIcon className='w-8 h-8 p-1' />,
+    dark: <SunIcon className='h-8 w-8 p-1' />,
+    light: <MoonIcon className='h-8 w-8 p-1' />,
   };
 
   return (
     <nav className='flex items-center justify-center gap-3 pt-2'>
       <a
-        className='inline-flex items-center justify-center bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80 rounded-sm'
+        className='inline-flex items-center justify-center rounded-sm bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80'
         href='#'
         aria-label='Ir para a página inicial'
         title='Ir para a página inicial'
       >
-        <HouseIcon className='w-8 h-8 p-1' />
+        <HouseIcon className='h-8 w-8 p-1' />
       </a>
       <a
-        className='inline-flex items-center justify-center bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80 rounded-sm'
+        className='inline-flex items-center justify-center rounded-sm bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80'
         href='#'
         aria-label='Ir para a página de histórico'
         title='Ir para a página de histórico'
       >
-        <HistoryIcon className='w-8 h-8 p-1' />
+        <HistoryIcon className='h-8 w-8 p-1' />
       </a>
       <a
-        className='inline-flex items-center justify-center bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80 rounded-sm'
+        className='inline-flex items-center justify-center rounded-sm bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80'
         href='#'
         aria-label='Ir para a página de configurações'
         title='Ir para a página de configurações'
       >
-        <SettingsIcon className='w-8 h-8 p-1' />
+        <SettingsIcon className='h-8 w-8 p-1' />
       </a>
       <a
-        className='inline-flex items-center justify-center bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80 rounded-sm'
+        className='inline-flex items-center justify-center rounded-sm bg-green-600 text-gray-900 no-underline transition-all duration-100 ease-in-out hover:brightness-80'
         href='#'
         aria-label='Mudar tema'
         title='Mudar tema'

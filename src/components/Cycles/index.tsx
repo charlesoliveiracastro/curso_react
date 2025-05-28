@@ -19,7 +19,7 @@ export function Cycles() {
   };
 
   return (
-    <div className='flex flex-col gap-2 items-center justify-center pt-2'>
+    <div className='flex flex-col items-center justify-center gap-2 pt-2'>
       <span>Ciclos:</span>
       <div className='flex gap-3'>
         {cycleSteps.map((_, index) => {

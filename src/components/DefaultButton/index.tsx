@@ -11,7 +11,7 @@ export function DefaultButton({
   return (
     <>
       <button
-        className={`border-none mt-4 mb-4 bg-${color}-600 rounded-md text-white flex items-center justify-center min-w-52 min-h-10 transition-all duration-100 ease-in-out hover:brightness-80 disabled:bg-gray-500 cursor-pointer`}
+        className={`mt-4 mb-4 border-none bg-${color}-600 flex min-h-10 min-w-52 cursor-pointer items-center justify-center rounded-md text-white transition-all duration-100 ease-in-out hover:brightness-80 disabled:bg-gray-500`}
         {...props}
       >
         {icon}

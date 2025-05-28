@@ -13,7 +13,7 @@ export function DefaultInput({ label, id, ...props }: DefaultInputProps) {
       {/* <label htmlFor={id}>{label ? label : 'Informe uma Label'}</label> */}
       <input
         id={id}
-        className='bg-transparent border-solid text-center text-1.8xl p-1.5 outline-none border-2 border-transparent border-b-green-600 transition-all duration-100 ease-in-out focus:rounded-md focus:border-green-600 placeholder:italic disabled:border-b-[0.2rem] disabled:border-b-gray-500'
+        className='text-1.8xl border-2 border-solid border-transparent border-b-green-600 bg-transparent p-1.5 text-center transition-all duration-100 ease-in-out outline-none placeholder:italic focus:rounded-md focus:border-green-600 disabled:border-b-[0.2rem] disabled:border-b-gray-500'
         {...props}
       />
     </>

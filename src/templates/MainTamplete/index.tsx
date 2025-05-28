@@ -10,7 +10,7 @@ type MainTamplateProps = {
 
 export function MainTamplate({ children }: MainTamplateProps) {
   return (
-    <div className='bg-gray-900 min-h-screen w-full text-white'>
+    <div className='min-h-screen w-full bg-gray-900 text-white'>
       <Container>
         <Logo />
       </Container>

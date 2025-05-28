@@ -78,7 +78,7 @@ export function MainForm() {
   return (
     <form
       onSubmit={handleCreateNewTask}
-      className='flex flex-col gap-1 items-center justify-center text-center'
+      className='flex flex-col items-center justify-center gap-1 text-center'
       action=''
     >
       <div className='flex flex-col gap-1'>
